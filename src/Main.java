@@ -1,34 +1,29 @@
-import java.io.FileReader;
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.util.Properties;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import br.com.rmovies.model.JsonParser;
+import br.com.rmovies.service.RequestMovieJsonService;
 
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        //Lendo
-        Properties props =  new Properties();
-        props.load(new FileReader("confs.properties"));
-        final String API_KEY = props.getProperty("API_KEY");
+            String json = RequestMovieJsonService.getBodyHtml();
+            var jsonParser = new JsonParser();
+            var moviesJson = jsonParser.parse(json);
+            List<String> titles = new ArrayList<>();
+            List<String> urlsImages = new ArrayList<>();
 
-        try {
-            var uri = URI.create("https://imdb-api.com/en/API/Top250Movies/"+API_KEY);
-            var client = HttpClient.newHttpClient();
-            var request = HttpRequest.newBuilder(uri).GET().build();
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            for (Map<String, String> movie: moviesJson) {
+                titles.add(movie.get("title"));
+                urlsImages.add(movie.get("image"));
 
-            System.out.println(response.body());
-            System.out.println(response.body().length());
+            }
 
-            System.out.println(response.body().getClass().getName());
+            titles.forEach(System.out::println);
+            urlsImages.forEach(System.out::println);
 
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+
     }
 }
