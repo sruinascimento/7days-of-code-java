@@ -42,6 +42,7 @@ public class JsonParserMovieService {
                 .map(e -> e.split("\",\"")[pos])
                 .map(e -> e.split(":\"")[1])
                 .map(e -> e.replaceAll("\"", ""))
+                .map(e -> e.replaceAll("(@+)(.*).jpg$", "$1.jpg"))
                 .collect(Collectors.toList());
     }
 

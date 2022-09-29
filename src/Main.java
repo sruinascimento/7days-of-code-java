@@ -1,8 +1,10 @@
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import br.com.rmovies.model.HTMLGenerator;
 import br.com.rmovies.model.Movie;
 import br.com.rmovies.service.JsonParserMovieService;
 import br.com.rmovies.service.RequestMovieJsonService;
@@ -26,7 +28,10 @@ public class Main {
             }
 
 
-            movies.forEach(System.out::println);
+            HTMLGenerator htmlGenerator = new HTMLGenerator(new PrintWriter("index.html"));
+            htmlGenerator.generate(movies);
+            htmlGenerator.closeWriter();
+//            movies.forEach(System.out::println);
 
 
 
