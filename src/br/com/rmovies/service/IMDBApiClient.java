@@ -8,9 +8,9 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Properties;
 
-public class RequestMovieJsonService {
+public class IMDBApiClient {
 
-    public static String getBodyHtml() {
+    public static String getBodyHtml(String apiKEY ) {
         try {
 
             final String API_KEY = getApiKey();

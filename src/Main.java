@@ -1,18 +1,22 @@
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Properties;
 
 import br.com.rmovies.model.HTMLGenerator;
 import br.com.rmovies.model.Movie;
 import br.com.rmovies.service.JsonParserMovieService;
-import br.com.rmovies.service.RequestMovieJsonService;
+import br.com.rmovies.service.IMDBApiClient;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+            Properties props =  new Properties();
+            props.load(new FileReader("confs.properties"));
+            final String API_KEY =  props.getProperty("API_KEY");
 
-            String json = RequestMovieJsonService.getBodyHtml();
+            String json = IMDBApiClient.getBodyHtml(API_KEY);
 
             String[] moviesArray = JsonParserMovieService.parseJsonMovies(json);
 
