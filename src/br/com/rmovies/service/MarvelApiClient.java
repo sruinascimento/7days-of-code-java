@@ -8,17 +8,21 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class IMDBApiClient implements APIClient {
+public class MarvelApiClient implements APIClient {
     private String apiKey;
+    private String timeStamp;
+    private String hash;
 
-    public IMDBApiClient(String apiKey) {
+    public MarvelApiClient(String apiKey, String timeStamp, String hash) {
         this.apiKey = apiKey;
+        this.timeStamp = timeStamp;
+        this.hash = hash;
     }
 
     @Override
     public String getBody( ) {
         try {
-            var uri = URI.create("https://imdb-api.com/en/API/Top250Movies/"+this.apiKey);
+            var uri = URI.create("https://gateway.marvel.com/v1/public/series?ts="+this.timeStamp+"&apikey="+this.apiKey+"&hash="+this.hash);
             var client = HttpClient.newHttpClient();
             var request = HttpRequest.newBuilder(uri).GET().build();
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -27,6 +31,4 @@ public class IMDBApiClient implements APIClient {
             throw new RuntimeException(e);
         }
     }
-
-
 }

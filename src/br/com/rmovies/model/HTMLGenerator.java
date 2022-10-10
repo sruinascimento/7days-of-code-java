@@ -12,7 +12,7 @@ public class HTMLGenerator {
         this.writer = writer;
     }
 
-    public void generate(List<Movie> movies) throws IOException {
+    public void generate(List<? extends Content> movies) throws IOException {
         writer.write(getBeginHtml());
         movies.forEach((movie) -> {
             try {
@@ -36,7 +36,10 @@ public class HTMLGenerator {
                <html>
                 """ + this.getHead() + """
                 <body style="background-color: #8D8E8F;">
-                    <h1 style="text-align: center;"> R Movies </h1>
+                <header style="display:flex; justify-content: center; gap: 20px; background-color:black; color: red; margin-bottom: 20px; padding: 10px 0;">
+                    <i style="font-size: 48px;" class="fa-solid fa-film"></i>
+                    <h1 style="text-align: center; font-family: 'Anton'; font-size: 40px; font-weight: bold; color: white;"> R Movies </h1>
+                </header>
                 """;
 
         return beginHTML;
@@ -45,13 +48,20 @@ public class HTMLGenerator {
     private String getHead() {
         String head =
                 """
-                <head>
-                    <meta charset=\"utf-8\">
-                    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
-                    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" 
-                        + "integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">					
-                </head>
-                """;
+                        <head>
+                            <meta charset=\"utf-8\">
+                            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
+                            <link rel="preconnect" href="https://fonts.googleapis.com">
+                            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                            <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+                            <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" 
+                                + "integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">		
+                            <script src="https://kit.fontawesome.com/34289682d8.js" crossorigin="anonymous"></script>		
+                            <link rel="preconnect" href="https://fonts.googleapis.com">
+                            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                            <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">	
+                        </head>
+                        """;
 
         return head;
     }
