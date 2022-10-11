@@ -34,46 +34,46 @@ Projeto de backend com a linguagem Java, é um desafio do <a href="https://7days
 
 
 ## 1º Dia
-  - [x] criar o código Java que executará uma requisição HTTP do tipo GET. Você pode usar o pacote java.net.http e as classes HttpRequest, HttpClient e HttpResponse, além da classe URI.
-  - [x] executar a requisição e pegar a resposta (o JSON).
-  - [x] imprimir o corpo da resposta no console.
+  - criar o código Java que executará uma requisição HTTP do tipo GET. Você pode usar o pacote java.net.http e as classes HttpRequest, HttpClient e HttpResponse, além da classe URI.
+  - executar a requisição e pegar a resposta (o JSON).
+  - imprimir o corpo da resposta no console.
   
   
 ## 2º Dia
-  - [x] parsear as respostas, extrair o json.
-  - [x] fazer uso de Expressões regulares para o parser.
-  - [x] utilizar List<String> para cada atributo.
+  - parsear as respostas, extrair o json.
+  - fazer uso de Expressões regulares para o parser.
+  - utilizar List<String> para cada atributo.
   
 
 ## 3º Dia
-  - [x] utilizar conceitor de OO.
-  - [x] modelar uma classe para filmes com os atributos title, url, rate e year. 
+  - utilizar conceitor de OO.
+  - modelar uma classe para filmes com os atributos title, url, rate e year. 
   
   
 ## 4º Dia
-  - [x] criar uma nova classe HTMLGenerator, que recebe no construtor um Writer (por exemplo, PrintWriter).
-  - [x] adicionar um método chamado ‘generate’, que irá receber uma List<Movie>.
-  - [x] aplicar estilização CSS, ou utilizar modelos do Bootstrap por exemplo.
+  - criar uma nova classe HTMLGenerator, que recebe no construtor um Writer (por exemplo, PrintWriter).
+  - adicionar um método chamado ‘generate’, que irá receber uma List<Movie>.
+  - aplicar estilização CSS, ou utilizar modelos do Bootstrap por exemplo.
   
   
  ## 5º Dia
-   - [x] criar uma classe chamada ImdbApiClient para encapsular a requisição para a API do IMDB .
-   - [x] criar uma classe para o parseamento JSON, pois o mesmo está avulso na classe Main.
+   - criar uma classe chamada ImdbApiClient para encapsular a requisição para a API do IMDB .
+   - criar uma classe para o parseamento JSON, pois o mesmo está avulso na classe Main.
 
 
 ## 6º Dia
-   - [x] Criar uma interface chamada Content definir o comportamento comum de qualquer conteúdo. A interface terá quatro métodos com retornos do tipo string, os quais são: title(), urlImage(), rating() e year().
-   - [x] classe movie deverá implementar a interface Content.
-   - [x] criar um interface JsonParser, com o método parse(). 
-   - [x] consumir API da Marvel.
-   - [x] crie uma interface chamada 'APIClient' com um método getBody().
-   - [x] consumir a API da Marvel criando um cliente da API e JsonParser. Aqui também, você precisará de uma conta para gerar a API Key (chave pública e privada).
-   - [x] adicionar um novo método na interface chamado type(). Esse método irá devolver o tipo do conteúdo em questão, por exemplo: Movie, Series, ComicBook, etc.
+   - criar uma interface chamada Content definir o comportamento comum de qualquer conteúdo. A interface terá quatro métodos com retornos do tipo string, os quais são: title(), urlImage(), rating() e year().
+   - classe movie deverá implementar a interface Content.
+   - criar um interface JsonParser, com o método parse(). 
+   - consumir API da Marvel.
+   - crie uma interface chamada 'APIClient' com um método getBody().
+   - consumir a API da Marvel criando um cliente da API e JsonParser. Aqui também, você precisará de uma conta para gerar a API Key (chave pública e privada).
+   - adicionar um novo método na interface chamado type(). Esse método irá devolver o tipo do conteúdo em questão, por exemplo: Movie, Series, ComicBook, etc.
 
 
 ## 7º Dia
-   - [x] implementar a interface Comparable<? extends Content> na classe (ou record) Movie (e também na classe Series, se você a tiver criado). Para começar, você pode implementar o método usando a nota (rating) como parâmetro de comparação.
-  - [x] o método sort() está sobrecarregado, então você pode passar um Comparator como segundo parâmetro para inverter a lista
-  - [x] implementar outras formas de comparação usando um Comparator.
+   - implementar a interface Comparable<? extends Content> na classe (ou record) Movie (e também na classe Series, se você a tiver criado). Para começar, você pode implementar o método usando a nota (rating) como parâmetro de comparação.
+  - o método sort() está sobrecarregado, então você pode passar um Comparator como segundo parâmetro para inverter a lista
+  - implementar outras formas de comparação usando um Comparator.
   
   
