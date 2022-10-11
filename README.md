@@ -11,7 +11,12 @@ Projeto de backend com a linguagem Java, é um desafio do <a href="https://7days
 | 🚀 URL         | https://sruinascimento.github.io/7days-of-code-java/
 | 🤿 Desafio | https://7daysofcode.io/matricula/java
 
-![](https://user-images.githubusercontent.com/57668890/194978056-89a48ec6-6ec3-4a02-b409-04c52f3c0182.png#vitrinedev)
+
+
+![](https://user-images.githubusercontent.com/57668890/194980876-d96d3a53-7d19-4313-be7e-d8d3955e8dac.png#vitrinedev)
+
+![](https://user-images.githubusercontent.com/57668890/194980676-9168664d-70d1-4348-b99f-5eda411fc346.png)
+
 
 
 ## 🔨 Tecnologias
