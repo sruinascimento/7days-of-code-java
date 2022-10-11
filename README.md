@@ -2,7 +2,7 @@
 
 # R Movie
 
-Projeto de backend com a linguagem Java, é um desafios dos ![Seven Days of Code](https://7daysofcode.io/matricula/java) que visa gerar um site HTML com os dados que foram consumidos da API do ![IMDB](https://imdb-api.com/) e da ![Marvel](https://developer.marvel.com/).
+Projeto de backend com a linguagem Java, é um desafio do <a href="https://7daysofcode.io/matricula/java">Seven Days of Code</a> que visa gerar um site HTML com os dados que foram consumidos da API do <a href="https://imdb-api.com/">IMDB</a> e da <a href="https://developer.marvel.com/"> Marvel</a>.
 
 | 🪧 Vitrine.Dev |     |
 | -------------  | --- |
