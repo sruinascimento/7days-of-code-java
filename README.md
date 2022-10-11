@@ -9,7 +9,7 @@ Projeto de backend com a linguagem Java, é um desafio do <a href="https://7days
 | ✨ Nome        | R Movie
 | 🏷️ Tecnologias | Java, HTML5, CSS3, BootStrap
 | 🚀 URL         | https://sruinascimento.github.io/7days-of-code-java/
-| 🤿 Desafio | https://www.alura.com.br/imersao-java
+| 🤿 Desafio | https://7daysofcode.io/matricula/java
 
 ![](https://user-images.githubusercontent.com/57668890/180806003-6765c6ae-b347-4e0c-82a5-bc224e08d9a8.png#vitrinedev)
 
